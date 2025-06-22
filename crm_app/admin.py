@@ -4,6 +4,7 @@ from .models import Order, Customer
 # Register your models here.
 
 admin.site.register(Customer)   
+admin.site.register(Order)
 
 class OrderAdmin(admin.ModelAdmin):
     list_display = ('title', 'customer', 'status', 'deadline')

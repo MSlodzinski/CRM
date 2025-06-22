@@ -11,5 +11,8 @@ def main_page(request):
 
 urlpatterns = [
     path('', view=main_page, name='main_page'), # TODO: Implement main_page view
-    # path('/customers', view=customer_list, name='customer_list'),
+    path('/customers', views.customer_list, name='customer_list'),
+    path('/customers/add', views.add_customer, name='add_customer'),
+    path('/customers/remove/<int:pk>', views.remove_customer, name='remove_customer'),
+    path('/customers/edit/<int:pk>', views.edit_customer, name='edit_customer'),
 ]
